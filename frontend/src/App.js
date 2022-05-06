@@ -5,7 +5,9 @@ import React, { useState, useEffect, Component } from 'react'
 import axios from 'axios';
 import './App.css';
 
-function App() {
+{
+    /*
+    function App() {
     const [message, setMessage]=useState([]);
 
     useEffect(()=>{
@@ -30,6 +32,11 @@ function App() {
         </header>
       </div>
   );
+}
+    */
+}
+
+function App() {
 }
 
 export default App;
