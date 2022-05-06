@@ -119,6 +119,10 @@ function Create(){
             <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "380px"}}></div>
             <img src={ban} style={{height: "77px", marginTop: "20px", position:"absolute"}}/>
 
+            <b style={{fontSize: "20px", marginLeft: "15px", marginTop: "160px", position:"absolute"}}>포도알 할인</b>
+            <br/>
+            <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "180px"}}></div>
+
 
             
 
