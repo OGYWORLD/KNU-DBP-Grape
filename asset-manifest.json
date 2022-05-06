@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e64ae449.css",
-    "main.js": "/static/js/main.9965462f.js",
+    "main.js": "/static/js/main.22af3255.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/LeferiBaseBold.ttf": "/static/media/LeferiBaseBold.c840b4ebf33a48be5eac.ttf",
     "static/media/Final_carousel.png": "/static/media/Final_carousel.f94531449fcb17909b44.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.e64ae449.css.map": "/static/css/main.e64ae449.css.map",
-    "main.9965462f.js.map": "/static/js/main.9965462f.js.map",
+    "main.22af3255.js.map": "/static/js/main.22af3255.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e64ae449.css",
-    "static/js/main.9965462f.js"
+    "static/js/main.22af3255.js"
   ]
 }
