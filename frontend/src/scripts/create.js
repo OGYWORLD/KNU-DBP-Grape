@@ -3,10 +3,17 @@ import axios from "axios"
 import { Input, Button, Tabs, Menu, Carousel, Tooltip } from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
-import {CaretUpOutlined, AppstoreOutlined, SettingOutlined, NotificationTwoTone, NodeExpandOutlined} from '@ant-design/icons'
+import {CaretUpOutlined, CaretDownOutlined} from '@ant-design/icons'
 import finalT from "../image/Final_carousel.png"
 import mio from "../image/ad.PNG"
 import dia from "../image/ed.PNG"
+import van from "../image/van.jpg"
+import death from "../image/death.PNG"
+import mia from "../image/mia.PNG"
+import stone from "../image/stone.png"
+import gloomy from "../image/gloomy.png"
+import miaF from "../image/miaF.png"
+import ban from "../image/ban.jpg"
 
 function Create(){
 
@@ -24,29 +31,29 @@ function Create(){
             <Carousel autoplay style={{width: "1140px", }}>
                     <div>
                     <h3 style={contentStyle}>
-                    <img src={finalT} style={{height: "300px", marginLeft: "280px"}}/>
+                    <img src={finalT}/>
                     </h3>
                     </div>
                     <div>
                     <h3 style={contentStyle}>
-                    <img src={finalT} style={{height: "300px", marginLeft: "280px"}}/>
+                    <img src={stone}/>
                     </h3>
                     </div>
                     <div>
                     <h3 style={contentStyle}>
-                    <img src={finalT} style={{height: "300px", marginLeft: "280px"}}/>
+                    <img src={gloomy}/>
                     </h3>
                     </div>
                     <div>
                     <h3 style={contentStyle}>
-                    <img src={finalT} style={{height: "300px", marginLeft: "280px"}}/>
+                    <img src={miaF}/>
                     </h3>
                     </div>
                 </Carousel>
 
             <br/><br/>
-            <b style={{fontSize: "23px"}}>창작 뮤지컬</b>
-            <div style = {{backgroundColor: '#A69BAE', width: '1140px', height: '15px'}}></div>
+            <b style={{fontSize: "23px", marginLeft: "15px"}}>창작 뮤지컬</b>
+            <div style = {{backgroundColor: '#A69BAE', width: '1140px', height: '10px'}}></div>
             <div style = {{backgroundColor: '#5A4968', width: '1140px', height: '5px'}}></div>
             <br/>
             <b style={{fontSize: "20px", marginLeft: "15px"}}>주간 랭킹</b>
@@ -57,21 +64,63 @@ function Create(){
             <b style={{fontSize: "23px", marginTop: "162px", marginLeft: "7px", position:"absolute", color: "#C83D3D"}}><CaretUpOutlined /></b>
             <b style={{fontSize: "15px", marginTop: "168px", marginLeft: "33px", position:"absolute"}}>3</b>
 
+            {/*주간 랭킹 1위*/}
             <Tooltip title="미오 프라텔로 (드림아트센터 1관)">
-            <img src={mio} style={{height: "300px", marginLeft: "80px", marginTop: "30px", position:"absolute"}}/>
+            <img src={mio} style={{height: "300px", marginLeft: "80px", marginTop: "40px", position:"absolute"}}/>
             </Tooltip>
 
             <b style={{fontSize: "20px", marginTop: "30px", marginLeft: "340px", position:"absolute", color: "#434343"}}>[창작뮤지컬] 미오 프라텔로</b>
             <b style={{fontSize: "17px", marginTop: "70px", marginLeft: "340px", position:"absolute", color: "#737373"}}>드림아트센터 1관 2022.03.08 ~ 2022.06.19</b>
             <div style = {{backgroundColor: '#666666', width: '800px', height: '2px', marginTop: "110px", position:"absolute", marginLeft:"340px"}}></div>
 
-            <b style={{fontSize: "25px", marginTop: "180px", marginLeft: "360px", position:"absolute"}}>2</b>
-            <b style={{fontSize: "23px", marginTop: "212px", marginLeft: "347px", position:"absolute", color: "#C83D3D"}}><CaretUpOutlined /></b>
-            <b style={{fontSize: "15px", marginTop: "218px", marginLeft: "373px", position:"absolute"}}>3</b>
+
+            {/*주간 랭킹 2위*/}
+            <b style={{fontSize: "25px", marginTop: "190px", marginLeft: "340px", position:"absolute"}}>2</b>
+            <b style={{fontSize: "23px", marginTop: "222px", marginLeft: "327px", position:"absolute", color: "#C83D3D"}}><CaretUpOutlined /></b>
+            <b style={{fontSize: "15px", marginTop: "228px", marginLeft: "353px", position:"absolute"}}>3</b>
 
             <Tooltip title="디아길레프 (아트윈씨어터 1관)">
-            <img src={dia} style={{height: "180px", marginLeft: "400px", marginTop: "130px", position:"absolute"}}/>
+            <img src={dia} style={{height: "180px", marginLeft: "380px", marginTop: "140px", position:"absolute"}}/>
             </Tooltip>
+            <p style={{fontSize:"13px", marginLeft: "395px", marginTop: "330px", position:"absolute"}}>[창작] 디아길레프</p>
+
+
+            {/*주간 랭킹 3위*/}
+            <b style={{fontSize: "25px", marginTop: "190px", marginLeft: "550px", position:"absolute"}}>3</b>
+            <b style={{fontSize: "23px", marginTop: "222px", marginLeft: "537px", position:"absolute", color: "#3D53C8"}}><CaretDownOutlined /></b>
+            <b style={{fontSize: "15px", marginTop: "228px", marginLeft: "563px", position:"absolute"}}>1</b>
+
+            <Tooltip title="빈센트 반 고흐 (충무아트센터 중극장 블랙)">
+            <img src={van} style={{height: "180px", marginLeft: "590px", marginTop: "140px", position:"absolute"}}/>
+            </Tooltip>
+            <p style={{fontSize:"13px", marginLeft: "592px", marginTop: "330px", position:"absolute"}}>[창작] 빈센트 반 고흐</p>
+
+
+            {/*주간 랭킹 4위*/}
+            <b style={{fontSize: "25px", marginTop: "190px", marginLeft: "770px", position:"absolute"}}>4</b>
+            <b style={{fontSize: "23px", marginTop: "222px", marginLeft: "747px", position:"absolute", color: "#C83D3D"}}><CaretUpOutlined /></b>
+            <b style={{fontSize: "15px", marginTop: "228px", marginLeft: "773px", position:"absolute"}}>5</b>
+
+            <Tooltip title="사의 찬미 (TOM 1관)">
+            <img src={death} style={{height: "180px", marginLeft: "800px", marginTop: "140px", position:"absolute"}}/>
+            </Tooltip>
+            <p style={{fontSize:"13px", marginLeft: "820px", marginTop: "330px", position:"absolute"}}>[창작] 사의 찬미</p>
+
+             {/*주간 랭킹 5위*/}
+             <b style={{fontSize: "25px", marginTop: "190px", marginLeft: "970px", position:"absolute"}}>5</b>
+            <b style={{fontSize: "23px", marginTop: "222px", marginLeft: "957px", position:"absolute", color: "#3D53C8"}}><CaretDownOutlined /></b>
+            <b style={{fontSize: "15px", marginTop: "228px", marginLeft: "983px", position:"absolute"}}>2</b>
+
+            <Tooltip title="미아 파밀리아 (예스24스테이지 2관)">
+            <img src={mia} style={{height: "180px", marginLeft: "1010px", marginTop: "140px", position:"absolute"}}/>
+            </Tooltip>
+            <p style={{fontSize:"13px", marginLeft: "1016px", marginTop: "330px", position:"absolute"}}>[창작] 미아 파밀리아</p>
+
+            <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "380px"}}></div>
+            <img src={ban} style={{height: "77px", marginTop: "20px", position:"absolute"}}/>
+
+
+            
 
 
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
