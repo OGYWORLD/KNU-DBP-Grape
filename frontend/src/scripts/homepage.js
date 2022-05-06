@@ -17,9 +17,9 @@ function Homepage(){
 
     return(
         <div>
-            <div style = {{marginLeft: "25.5%"}}>
+            <div className = "body">
                 <img src = {logo} style = {{width: "187.5px", height: "75px", marginTop: "25px", position:"absolute", }}/>
-                <Input className="input" style = {{width: "27%", height: "20px", marginTop: "55px", marginLeft: "210px", position:"absolute", fontSize: "20px", borderColor: "#5A4968"
+                <Input className="input" style = {{width: "700px", height: "20px", marginTop: "55px", marginLeft: "210px", position:"absolute", fontSize: "20px", borderColor: "#5A4968"
             , borderWidth: "0 0 2px", outline: "0"}}/>
                 <b style={{fontSize: "15px", marginLeft: "950px", marginTop: "55px", position:"absolute",}}> 로그인 </b>
                 <b style={{fontSize: "15px", marginLeft: "1015px", marginTop: "54px", position:"absolute",}}>|</b>

@@ -18,3 +18,34 @@ input {
     font-weight: 50;
     src: url("../fonts/LeferiBaseBold.ttf") format("truetype");
   }
+
+
+  @media only screen and (min-width: 2100px) {
+    body {
+        margin-left: 25.5%;
+    }
+  }
+
+  @media only screen and (max-width: 2100px) {
+    body {
+        margin-left: 23%;
+    }
+  }
+
+  @media only screen and (max-width: 1900px) {
+    body {
+        margin-left: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 1750px) {
+    body {
+        margin-left: 17%;
+    }
+  }
+
+  @media only screen and (max-width: 1500px) {
+    body {
+        margin-left: 12%;
+    }
+  }

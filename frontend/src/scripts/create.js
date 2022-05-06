@@ -17,10 +17,10 @@ function Create(){
 
     return(
         <div>
-            <Carousel autoplay style={{marginRight: "40%", }}>
+            <Carousel autoplay style={{width: "1140px", }}>
                     <div>
                     <h3 style={contentStyle}>
-                    <img src={finalT} style={{height: "300px", marginLeft: "24%"}}/>
+                    <img src={finalT} style={{height: "300px", marginLeft: "280px"}}/>
                     </h3>
                     </div>
                     <div>
@@ -36,8 +36,8 @@ function Create(){
 
             <br/><br/>
             <b style={{fontSize: "23px"}}>창작 뮤지컬</b>
-            <div style = {{backgroundColor: '#A69BAE', width: '60%', height: '15px'}}></div>
-            <div style = {{backgroundColor: '#5A4968', width: '60%', height: '5px'}}></div>
+            <div style = {{backgroundColor: '#A69BAE', width: '1140px', height: '15px'}}></div>
+            <div style = {{backgroundColor: '#5A4968', width: '1140px', height: '5px'}}></div>
 
         </div>
     );
