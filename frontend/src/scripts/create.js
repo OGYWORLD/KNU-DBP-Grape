@@ -16,6 +16,7 @@ import miaF from "../image/miaF.png"
 import ban from "../image/ban.jpg"
 import sale from "../image/sale.jpg"
 import bisue from "../image/sale_bisue.jpg"
+import nansae from "../image/sale_nansae.jpg"
 import glow from "../image/glow.gif"
 
 function Create(){
@@ -136,7 +137,9 @@ function Create(){
             <img src={bisue} style={{width: "1140px", marginTop: "30px", position:"absolute"}}/>
             </Tooltip>
 
-            <img src={glow} style={{width: "100px", marginTop: "30px", position:"absolute", opacity: "0.2"}}/>
+            <Tooltip title="난세 (서경대학교 공연예술센터 스콘 2관)">
+            <img src={nansae} style={{width: "1140px", marginTop: "260px", position:"absolute"}}/>
+            </Tooltip>
             
 
 
