@@ -3,7 +3,7 @@ import axios from "axios"
 import { Input, Button, Tabs, Menu, Carousel } from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
-import {MailOutlined, AppstoreOutlined, SettingOutlined} from '@ant-design/icons'
+import {LayoutOutlined, FunnelPlotOutlined, GlobalOutlined, StarOutlined} from '@ant-design/icons'
 import finalT from "../image/Final_carousel.png"
 import Create from "./create"
 
@@ -28,16 +28,16 @@ function Homepage(){
 
                 <Menu mode="horizontal" defaultSelectedKeys={['create']} style={{width: "1140px", borderColor: "#DADADA",  borderWidth: "0 0 4px", fontFamily: "HSSSaemaul", fontSize: "17px", color: "#626262"}}
                 onClick={handleChange} >
-                    <Menu.Item key="create" icon={<MailOutlined />} style={{marginLeft:"50px", marginRight: "120px", borderWidth: "0 0 4px",}}>
+                    <Menu.Item key="create" icon={<LayoutOutlined />} style={{marginLeft:"50px", marginRight: "120px", borderWidth: "0 0 4px",}}>
                     창작 뮤지컬
                     </Menu.Item>
-                    <Menu.Item key="ricens" icon={<MailOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
+                    <Menu.Item key="ricens" icon={<FunnelPlotOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
                     라이센스 뮤지컬
                     </Menu.Item>
-                    <Menu.Item key="korea" icon={<MailOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
+                    <Menu.Item key="korea" icon={<GlobalOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
                     내한 뮤지컬
                     </Menu.Item>
-                    <Menu.Item key="concert" icon={<MailOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
+                    <Menu.Item key="concert" icon={<StarOutlined />} style={{marginRight: "120px", borderWidth: "0 0 4px"}}>
                     콘서트 / 강연
                     </Menu.Item>
                 </Menu>

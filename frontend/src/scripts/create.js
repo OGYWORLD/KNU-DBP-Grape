@@ -3,7 +3,7 @@ import axios from "axios"
 import { Input, Button, Tabs, Menu, Carousel, Tooltip } from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
-import {CaretUpOutlined, CaretDownOutlined} from '@ant-design/icons'
+import {CaretUpOutlined, CaretDownOutlined, LineChartOutlined, LayoutOutlined, DollarOutlined, CalendarOutlined} from '@ant-design/icons'
 import finalT from "../image/Final_carousel.png"
 import mio from "../image/ad.PNG"
 import dia from "../image/ed.PNG"
@@ -14,6 +14,9 @@ import stone from "../image/stone.png"
 import gloomy from "../image/gloomy.png"
 import miaF from "../image/miaF.png"
 import ban from "../image/ban.jpg"
+import sale from "../image/sale.jpg"
+import bisue from "../image/sale_bisue.jpg"
+import glow from "../image/glow.gif"
 
 function Create(){
 
@@ -52,11 +55,11 @@ function Create(){
                 </Carousel>
 
             <br/><br/>
-            <b style={{fontSize: "23px", marginLeft: "15px"}}>창작 뮤지컬</b>
+            <b style={{fontSize: "23px", marginLeft: "15px"}}><LayoutOutlined/> 창작 뮤지컬</b>
             <div style = {{backgroundColor: '#A69BAE', width: '1140px', height: '10px'}}></div>
             <div style = {{backgroundColor: '#5A4968', width: '1140px', height: '5px'}}></div>
             <br/>
-            <b style={{fontSize: "20px", marginLeft: "15px"}}>주간 랭킹</b>
+            <b style={{fontSize: "20px", marginLeft: "15px"}}><LineChartOutlined /> 주간 랭킹</b>
             <b style={{fontSize: "17px", marginLeft: "15px", color: "#777777"}}>{now.getFullYear()}년 {now.getMonth()+1}월 {now.getDate()}일</b>
             <br/>
             <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "10px"}}></div>
@@ -119,9 +122,23 @@ function Create(){
             <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "380px"}}></div>
             <img src={ban} style={{height: "77px", marginTop: "20px", position:"absolute"}}/>
 
-            <b style={{fontSize: "20px", marginLeft: "15px", marginTop: "160px", position:"absolute"}}>포도알 할인</b>
+
+            {/*포도알 할인*/}
+            <b style={{fontSize: "20px", marginLeft: "15px", marginTop: "160px", position:"absolute"}}><DollarOutlined /> 주간 포도알 할인</b>
+            <b style={{fontSize: "23px", marginLeft: "15px", color: "#154514", marginTop: "228px", position:"absolute"}}>
+            <CalendarOutlined /> {now.getFullYear()}년 {now.getMonth()+1}월 {(parseInt((now.getDate()/7)))+1}째주</b>
+            <img src={sale} style={{height: "77px", marginTop: "210px", position:"absolute", zIndex: "-1"}}/>
             <br/>
             <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "180px"}}></div>
+            <div style = {{backgroundColor: '#EBEBEB', width: '1140px', height: '5px', marginTop: "83px"}}></div>
+
+            <Tooltip title="비더슈탄트 (드림아트센터 3관)">
+            <img src={bisue} style={{width: "1140px", marginTop: "30px", position:"absolute"}}/>
+            </Tooltip>
+
+            <img src={glow} style={{width: "100px", marginTop: "30px", position:"absolute", opacity: "0.2"}}/>
+            
+
 
 
             
