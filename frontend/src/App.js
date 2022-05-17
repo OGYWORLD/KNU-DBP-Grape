@@ -4,6 +4,11 @@ import {Button, Input} from 'antd';
 import React, { useState, useEffect, Component } from 'react'
 import axios from 'axios';
 import './App.css';
+import Login from "./scripts/login"
+import New from "./scripts/new"
+import Mio from "./scripts/mio"
+import Homepage from "./scripts/homepage"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 {
     /*
@@ -37,6 +42,16 @@ import './App.css';
 }
 
 function App() {
+  return(
+    <>
+      <Routes>
+        <Route path="/KNU-DBP-Grape" exact={true} element={<Homepage />} />
+        <Route path="/KNU-DBP-Grape/login" element={<Login />} />
+        <Route path="/KNU-DBP-Grape/new" element={<New />} />
+        <Route path="/KNU-DBP-Grape/mio" element={<Mio />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

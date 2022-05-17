@@ -4,6 +4,7 @@ import { Input, Button, Tabs, Menu, Carousel, Tooltip } from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
 import {CaretUpOutlined, CaretDownOutlined, LineChartOutlined, LayoutOutlined, DollarOutlined, CalendarOutlined} from '@ant-design/icons'
+import { Link } from 'react-router-dom';
 import finalT from "../image/Final_carousel.png"
 import mio from "../image/ad.PNG"
 import dia from "../image/ed.PNG"
@@ -69,9 +70,11 @@ function Create(){
             <b style={{fontSize: "15px", marginTop: "168px", marginLeft: "33px", position:"absolute"}}>3</b>
 
             {/*주간 랭킹 1위*/}
+            <Link to="/KNU-DBP-Grape/mio">
             <Tooltip title="미오 프라텔로 (드림아트센터 1관)">
             <img src={mio} style={{height: "300px", marginLeft: "80px", marginTop: "40px", position:"absolute"}}/>
             </Tooltip>
+            </Link>
 
             <b style={{fontSize: "20px", marginTop: "30px", marginLeft: "340px", position:"absolute", color: "#434343"}}>[창작뮤지컬] 미오 프라텔로</b>
             <b style={{fontSize: "17px", marginTop: "70px", marginLeft: "340px", position:"absolute", color: "#737373"}}>드림아트센터 1관 2022.03.08 ~ 2022.06.19</b>
