@@ -7,6 +7,7 @@ import {LayoutOutlined, FunnelPlotOutlined, GlobalOutlined, StarOutlined} from '
 import { Link } from 'react-router-dom';
 import finalT from "../image/Final_carousel.png"
 import Create from "./create"
+import Bottom from "./bottom"
 
 function Homepage(){
 
@@ -50,6 +51,7 @@ function Homepage(){
                 }
 
             </div>
+            <Bottom/>
         </div>
     );
 }

@@ -12,6 +12,13 @@ input {
     margin-left: "25%", 
  }
 
+ .ant-notification-center {
+    left: 50%;
+    bottom: 50% !important;
+    margin-right: 30%;
+    transform: translate(-50%, -50%);
+  }
+
 
 @font-face {
     font-family: "HSSSaemaul";
@@ -21,37 +28,37 @@ input {
 
 
   @media only screen and (min-width: 2100px) {
-    body {
+    .body {
         padding-left: 25.5%;
     }
   }
 
   @media only screen and (max-width: 2100px) {
-    body {
+    .body {
         padding-left: 23%;
     }
   }
 
   @media only screen and (max-width: 2000px) {
-    body {
+    .body {
         padding-left: 20%;
     }
   }
 
   @media only screen and (max-width: 1900px) {
-    body {
+    .body {
         padding-left: 18%;
     }
   }
 
   @media only screen and (max-width: 1750px) {
-    body {
+    .body {
         padding-left: 17%;
     }
   }
 
   @media only screen and (max-width: 1550px) {
-    body {
+    .body {
         padding-left: 12%;
     }
   }

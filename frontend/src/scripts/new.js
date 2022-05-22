@@ -5,6 +5,7 @@ import logo from "../image/logo.png"
 import "../css/homepage.css"
 import { Link } from 'react-router-dom';
 import {EditOutlined} from '@ant-design/icons'
+import Bottom from "./bottom"
 
 function New(){
 
@@ -106,7 +107,10 @@ function New(){
                     </>)
                 }
 
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
+
+            <Bottom/>
         </div>
     );
 }

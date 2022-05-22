@@ -4,12 +4,15 @@ import { Input, Button, Tabs, Menu, Carousel, Checkbox } from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
 import { Link } from 'react-router-dom';
+import Bottom from "./bottom"
 import {LayoutOutlined, FunnelPlotOutlined, GlobalOutlined, StarOutlined} from '@ant-design/icons'
+
 
 function Login(){
 
     const [id, setId] = useState("");
     const [pw, setPw] = useState("");
+    const [userLevel, setUserLevel] = useState(0); // 0 로그인 안 함, 1 로그인 함
 
     const onChangeId = e => {
         setId(e.target.value)
@@ -22,6 +25,11 @@ function Login(){
     function onChange(e) {
         console.log(`checked = ${e.target.checked}`);
       }
+
+      const onChangeUserLevel = e => {
+        setUserLevel(1)
+        console.log(userLevel);
+    };
 
     return(
         <div>
@@ -53,14 +61,18 @@ function Login(){
                 </div>
 
                 <Button style = {{marginLeft: "390px", marginTop: "10px", width: "350px", height: "50px", backgroundColor: '#5B3291', color: "white"
-            , fontSize: "17px"}}>로그인</Button>
+            , fontSize: "17px"}} onClick={onChangeUserLevel}>로그인</Button>
 
             <div style = {{backgroundColor: '#C4C4C4', width: '350px', height: '5px', marginTop: "40px", marginLeft: "390px"}}></div>
             <b style = {{ paddingTop: "5px", marginLeft: "390px", position:"absolute"}}>아이디/비밀번호 찾기 | </b>
             <Link to="/KNU-DBP-Grape/new">
             <b style = {{ paddingTop: "5px", marginLeft: "540px", position:"absolute", color: "black"}}>회원가입 </b>
             </Link>
+
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
+
+            <Bottom/>
         </div>
     );
 }
