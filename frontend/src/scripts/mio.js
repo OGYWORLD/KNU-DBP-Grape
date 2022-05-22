@@ -61,7 +61,7 @@ function Mio(){
 
     return(
         <div>
-            {(checkNum == 1) &&
+            {(checkNum == 0) &&
             (openNotification('top'))}
 
             <div className = "body">
