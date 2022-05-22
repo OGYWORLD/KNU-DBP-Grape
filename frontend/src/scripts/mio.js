@@ -1,12 +1,20 @@
 import React, { useState, useEffect, Component } from 'react'
 import axios from "axios"
-import { Input, Button, Tabs, Menu, Carousel, Checkbox, notification, } from 'antd'
+import { Input, Card, Tabs, Menu, Descriptions, Checkbox, notification, Button} from 'antd'
 import logo from "../image/logo.png"
 import "../css/homepage.css"
 import { Link } from 'react-router-dom';
-import {LayoutOutlined, FunnelPlotOutlined, GlobalOutlined, StarOutlined} from '@ant-design/icons'
+import {LayoutOutlined, FunnelPlotOutlined, GlobalOutlined, StarOutlined, CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons'
 import Bottom from "./bottom"
 import mio from "../image/ad.jpg"
+import mio_notice1 from "../image/mio_notice1.jpg"
+import mio_notice2 from "../image/mio_notice2.jpg"
+import mio_sale1 from "../image/mio_sale1.jpg"
+import mio_sale2 from "../image/mio_sale2.jpg"
+import mio_sale3 from "../image/mio_sale3.jpg"
+import mio_sale4 from "../image/mio_sale4.jpg"
+import mio_sale5 from "../image/mio_sale5.jpg"
+import mio_cast from "../image/mio_cast.jpg"
 
 
 function Mio(){
@@ -39,7 +47,7 @@ function Mio(){
             <br/><br/><br/>
             <hr/>
             
-            <Checkbox onChange={onChange} style={{marginLeft: "500px"}}>하루동안 보지 않기</Checkbox>
+            <Checkbox onClick={onChange} style={{marginLeft: "500px"}}>하루동안 보지 않기</Checkbox>
           </>,
           placement,
           duration: 0,
@@ -48,6 +56,20 @@ function Mio(){
       };
 
     const [nkey, setNkey] = useState("create");
+    const [bottomKey, setBottomKey] = useState(1);
+    const [dateCast, setDateCast] = useState(0);
+
+    function handleDateCast29() {
+        setDateCast(29);
+    }
+
+    function handleDateCast30() {
+        setDateCast(30);
+    }
+
+    function handleDateCast31() {
+        setDateCast(31);
+    }
 
     function handleChange(key) {
         setNkey(key.key);
@@ -56,7 +78,8 @@ function Mio(){
       const { TabPane } = Tabs;
 
     function callback(key) {
-        console.log(key);
+        setBottomKey(key);
+        setCheckNum(key);
     }
 
     return(
@@ -114,20 +137,189 @@ function Mio(){
                 <p style = {{fontSize: "15px", position:"absolute", marginLeft: "350px", marginTop: "423px"}}>R1석 66,000원 S1석 44,000원</p>
 
 
-                <Tabs defaultActiveKey="1" onChange={callback} style = {{position:"absolute", marginTop: "600px", width: "1140px",}} size="large">
+                <Card style={{ width: "400px", height: "780px" , marginLeft: "730px", marginTop: "50px", borderRadius: "16px", boxShadow: "1px 1px 1px 2px #D6CDE1"}}>
+                    <Button shape="circle" icon={<CaretLeftOutlined />} disabled style={{ position:"absolute"}}/>
+                    <b style= {{fontSize: "25px", marginLeft: "150px", position:"absolute"}}>5월</b>
+                    <Button shape="circle" icon={<CaretRightOutlined />} disabled style={{marginLeft: "310px", position:"absolute"}}/>
+
+                    <div style={{marginTop: "40px"}}>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "10px", position:"absolute"}}>일</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "60px", position:"absolute"}}>월</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "110px", position:"absolute"}}>화</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "160px", position:"absolute"}}>수</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "210px", position:"absolute"}}>목</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "260px", position:"absolute"}}>금</p>
+                    <p style={{fontSize: "15px", marginTop: "15px", marginLeft: "310px", position:"absolute"}}>토</p>
+                    </div>
+
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "3px", position:"absolute"}} disabled>1</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "53px", position:"absolute"}} disabled>2</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "103px", position:"absolute"}} disabled>3</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "153px", position:"absolute"}} disabled>4</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "203px", position:"absolute"}} disabled>5</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "253px", position:"absolute"}} disabled>6</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "303px", position:"absolute"}} disabled>7</Button>
+
+                    <div style={{marginTop: "100px"}}>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "3px", position:"absolute"}} disabled>8</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "53px", position:"absolute"}} disabled>9</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "103px", position:"absolute"}} disabled>10</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "153px", position:"absolute"}} disabled>11</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "203px", position:"absolute"}} disabled>12</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "253px", position:"absolute"}} disabled>13</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "303px", position:"absolute"}} disabled>14</Button>
+                    </div>
+
+                    <div style={{marginTop: "160px"}}>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "3px", position:"absolute"}} disabled>15</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "53px", position:"absolute"}} disabled>16</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "103px", position:"absolute"}} disabled>17</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "153px", position:"absolute"}} disabled>18</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "203px", position:"absolute"}} disabled>19</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "253px", position:"absolute"}} disabled>20</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "303px", position:"absolute"}} disabled>21</Button>
+                    </div>
+
+                    <div style={{marginTop: "220px"}}>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "3px", position:"absolute"}} disabled>22</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "53px", position:"absolute"}} disabled>23</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "103px", position:"absolute"}} disabled>24</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "153px", position:"absolute"}} disabled>25</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "203px", position:"absolute"}} disabled>26</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "253px", position:"absolute"}} disabled>27</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "303px", position:"absolute"}} disabled>28</Button>
+                    </div>
+
+                    <div style={{marginTop: "280px"}}>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "3px", position:"absolute", background: "#5B3291", color: "white"}} onClick={handleDateCast29}>29</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "53px", position:"absolute"}} disabled>30</Button>
+                    <Button shape="circle" style={{marginTop: "60px", marginLeft: "103px", position:"absolute", background: "#5B3291", color: "white"}} onClick={handleDateCast31}>31</Button>
+                    </div>
+
+                    <hr style={{marginTop: "400px"}}/>
+
+                    {   (dateCast == 29) &&
+                        (<>
+                        <b style={{fontSize: "17px", marginLeft: "5px"}}>회차</b>
+                        <Tabs defaultActiveKey="1" type="card" style={{marginLeft: "5px", marginTop: "10px"}}>
+                            <TabPane tab="1회 14:00" key="1" style={{marginLeft: "0px", marginTop: "10px"}}>
+                            <li style={{marginLeft: "10px"}}>R석: 10 / S석: 5</li>
+                            <hr style={{marginTop: "20px"}}/>
+                            <b style={{fontSize: "17px", marginLeft: "5px"}}>캐스트</b>
+                            <p style={{fontSize: "15px", marginLeft: "5px", marginTop: "10px"}}>박규원, 성연, 정성일</p>
+                            <Button style={{width: "340px", height: "80px", fontSize:"18px", color: "white", background: "#5B3291", borderRadius: "16px"}}><b>예매하기</b></Button>
+                            </TabPane>
+                            <TabPane tab="2회 18:00" key="2" style={{marginLeft: "0px", marginTop: "10px"}}>
+                            <li style={{marginLeft: "10px"}}>R석: 10 / S석: 5</li>
+                            <hr style={{marginTop: "20px"}}/>
+                            <b style={{fontSize: "17px", marginLeft: "5px"}}>캐스트</b>
+                            <p style={{fontSize: "15px", marginLeft: "5px", marginTop: "10px"}}>최석진, 유현석, 정성일</p>
+                            <Button style={{width: "340px", height: "80px", fontSize:"18px", color: "white", background: "#5B3291", borderRadius: "16px"}}><b>예매하기</b></Button>
+                            </TabPane>
+                        </Tabs>
+
+                        </>) 
+                    }
+                </Card>
+
+
+                <Tabs defaultActiveKey="1" onChange={callback} style = {{position:"absolute", marginTop: "00px", width: "1140px", borderBottom: "3px"}} size="large">
                     <TabPane tab="공연정보" key="1">
-                    Content of Tab Pane 1
+
+                    <b style = {{fontSize: "20px", marginTop: "40px", position:"absolute"}}>공연시간 정보</b>
+                    <li style = {{fontSize: "15px", marginTop: "80px"}}>예매가능시간: 관람 2시간 전까지</li>
+                    <li style = {{fontSize: "15px", marginTop: "30px"}}>화,목,금 8시 / 수 4시, 8시 / 토 3시, 7시 / 일 및 공휴일 2시, 6시 (월요일 공연 없음)</li>
+                    <li style = {{fontSize: "15px", marginTop: "0px"}}>단, 5월 26일(목) 4시, 8시 / 6월 1일(수) 2시, 6시 / 6월 6일(월) 2시, 6시 (6월 7일(화) 쉼)</li>
+
+                    <b style = {{fontSize: "20px", marginTop: "100px", position:"absolute"}}>공지사항</b>
+                    <li style = {{fontSize: "15px", marginTop: "140px"}}>* 회차당 예매 매수 제한 : 1개 ID로 회차당 2매까지 예매 가능합니다.</li>
+                    <li style = {{fontSize: "15px", marginTop: "0px"}}>* 좌석 운영의 경우 공연시점 정부의 방역 지침에 따라 유동적으로 변경될 수 있습니다.</li>
+                    <li style = {{fontSize: "15px", marginTop: "0px"}}>* 포도알을 통한 예매는 전 회차 제한됩니다.</li>
+                    
+                    <img src = {mio_notice1} style = {{width: "800px", marginTop: "25px", position:"absolute", }}/>
+                    <img src = {mio_notice2} style = {{width: "800px", marginTop: "1580px", position:"absolute", }}/>
+
+
+                <b style = {{fontSize: "20px", marginTop: "3050px", position:"absolute"}}>할인정보</b>
+                <img src = {mio_sale1} style = {{width: "800px", marginTop: "3100px", position:"absolute", }}/>
+                <img src = {mio_sale2} style = {{width: "800px", marginTop: "3920px", position:"absolute", }}/>
+                <img src = {mio_sale3} style = {{width: "800px", marginTop: "4740px", position:"absolute", }}/>
+                <img src = {mio_sale4} style = {{width: "800px", marginTop: "5580px", position:"absolute", }}/>
+                <img src = {mio_sale5} style = {{width: "800px", marginTop: "6800px", position:"absolute", }}/>
+
+
+                <b style = {{fontSize: "20px", marginTop: "8400px", position:"absolute"}}>공연상세 / 캐스팅일정</b>
+                <img src = {mio_cast} style = {{width: "800px", marginTop: "8450px", position:"absolute"}}/>
                     </TabPane>
+                
+
                     <TabPane tab="부가정보" key="2">
-                    Content of Tab Pane 2
+                    <b style = {{fontSize: "20px", marginTop: "40px", position:"absolute"}}>기획사 정보</b>
+                    <li style = {{fontSize: "15px", marginTop: "80px"}}>제작: (주)콘텐츠플래닝</li>
+                    <li style = {{fontSize: "15px", marginTop: "0px"}}>홍보마케팅: 탄탄대로</li>
+                    <li style = {{fontSize: "15px", marginTop: "0px"}}>티켓: 클립서비스 1577-3363</li>
+
+                    <b style = {{fontSize: "20px", marginTop: "100px", position:"absolute"}}>상품관련 정보</b>
+                    
+
+                    <Descriptions title="" bordered style={{marginTop: "150px"}}>
+                        <Descriptions.Item label="주최/기획">	주식회사 콘텐츠플래닝</Descriptions.Item>
+                        <Descriptions.Item label="고객문의">1234-5678</Descriptions.Item>
+                        <Descriptions.Item label="공연시간">100분</Descriptions.Item>
+                        <Descriptions.Item label="관람등급">중학생이상 관람가</Descriptions.Item>
+                        <Descriptions.Item label="주연" span={2}>
+                        이승현, 김대현, 최석진, 박규원, 김순택, 최호승, 유현석, 성연, 정성일, 김지온, 김이담, 김준영
+                        </Descriptions.Item>
+                        <Descriptions.Item label="공연장소">드림아트센터 1관</Descriptions.Item>
+                        <Descriptions.Item label="예매수수료">장당 1,000원</Descriptions.Item>
+                        <Descriptions.Item label="배송료">현장수령 무료 (배송불가)</Descriptions.Item>
+                        <Descriptions.Item label="유효기간/이용조건" span={3}>
+                        2022.03.08~2022.06.19 예매한 공연 날짜, 회차에 한해 이용가능
+                        </Descriptions.Item>
+                        <Descriptions.Item label="예매취소조건" span={3}>
+                        취소일자에 따라서 아래와 같이 취소수수료가 부과됩니다.예매 일 기준보다 관람일 기준이 우선 적용됩니다. 단, 예매 당일 밤 12시 이전 취소 시에는 취소수수료가 없으며, 예매 수수료도 환불됩니다.(취소기한 내에 한함)
+                        <br/><br/>
+                        <Descriptions title="" layout="vertical" bordered>
+                            <Descriptions.Item label="취소일">
+                                예매 후 7일 이내<br/>
+                                예매 후 8일~관람일 10일전까지<br/>
+                                관람일 9일전~7일전까지<br/>
+                                관람일 6일전~3일전까지<br/>
+                                관람일 2일전~1일전까지<br/>
+                            </Descriptions.Item>
+                            <Descriptions.Item label="취소수수료">
+                                없음<br/>
+                                장당 4,000원(티켓금액의 10%한도)<br/>
+                                티켓금액의 10%<br/>
+                                티켓금액의 20%<br/>
+                                티켓금액의 30%<br/>
+                            </Descriptions.Item>
+                        </Descriptions>
+                        </Descriptions.Item>
+                        
+                        <Descriptions.Item label="취소환불방법" span={3}>
+                        - 예매/취소내역에서 직접 취소 또는 고객센터 (1234-5678)를 통해서 예매를 취소할 수 있습니다.<br/>
+                        - 티켓이 배송된 이후에는 인터넷 취소가 안되며, 취소마감 시간 이전에 티켓이 포도알 티켓 고객센터로 반송되어야 취소 가능합니다. 취소수수료는 도착일자 기준으로 부과되며, 배송료는 환불되지 않습니다.
+                        </Descriptions.Item>
+                    </Descriptions>
+
                     </TabPane>
                 </Tabs>
                 
             </div>
+            {
+                (bottomKey=="1") &&
+                ( <div style={{marginTop: "16500px"}}>
+                <Bottom/>
+                </div>)
+            }
 
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <Bottom/>
+            {
+                (bottomKey=="2") &&
+                ( <div style={{marginTop: "1400px"}}>
+                <Bottom/>
+                </div>)
+            }
         </div>
     );
 }

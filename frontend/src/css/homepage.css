@@ -19,6 +19,11 @@ input {
     transform: translate(-50%, -50%);
   }
 
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #5B3291 !important; 
+ }
+
+
 
 @font-face {
     font-family: "HSSSaemaul";
